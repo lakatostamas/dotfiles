@@ -15,6 +15,10 @@ let g:ctrlp_reuse_window  = 'startify'
 let g:ctrlp_split_window = 0
 let g:ale_sign_column_always = 1
 
+"   prettier format on save
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.json,*.css,*.scss,*.less,*.graphql,*.ts,*.tsx PrettierAsync
+
 runtime! plugin/sensible.vim
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -32,6 +36,8 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'w0rp/ale'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sensible'
+Plugin 'mitermayer/vim-prettier'
+Plugin 'jparise/vim-graphql'
 
 call vundle#end()            
 filetype plugin indent on
