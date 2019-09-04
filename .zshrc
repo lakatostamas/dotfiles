@@ -97,3 +97,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
+### FZF START
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+### FZF END
+
+### git START
+alias glc="git rev-parse @~"
+### git END
+
+
+### personal START
+alias hst="sudo vim /etc/hosts"
+alias zshconfig="vim ~/.zshrc"
+alias v="vim"
+### personal END

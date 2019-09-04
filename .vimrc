@@ -15,6 +15,16 @@ let g:ctrlp_reuse_window  = 'startify'
 let g:ctrlp_split_window = 0
 let g:ale_sign_column_always = 1
 
+let mapleader = "\<Space>"
+
+"   fuzzy finder
+set rtp+=/usr/local/opt/fzf
+nnoremap <Leader>a :Ag <C-R><C-W><CR>:cw<CR>
+nmap <Leader>f :Files<cr>|     " fuzzy find files in the working directory (where you launched Vim from)
+nmap <Leader><Space> :BLines<cr>|    " fuzzy find lines in the current file
+nmap <Leader>r :Ag |           " fuzzy find text in the working directory
+nmap <Leader>c :Commands<cr>|  " fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
+
 "   prettier format on save
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.json,*.css,*.scss,*.less,*.graphql,*.ts,*.tsx PrettierAsync
@@ -28,7 +38,6 @@ autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
@@ -38,6 +47,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'mitermayer/vim-prettier'
 Plugin 'jparise/vim-graphql'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()            
 filetype plugin indent on
