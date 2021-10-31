@@ -45,6 +45,8 @@ nnoremap <Leader>y "*y
   " yank the entire file
 nnoremap <Leader>Y ggyG
 
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 "   prettier format on save
 let g:prettier#autoformat = 1
