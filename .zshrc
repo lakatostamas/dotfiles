@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/tamaslakatos/.oh-my-zsh
+export ZSH=/Users/lakatostamas/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -114,3 +114,14 @@ alias hst="sudo vim /etc/hosts"
 alias zshconfig="vim ~/.zshrc"
 alias v="vim"
 ### personal END
+
+alias python='python3'
+alias pip='pip3'
+alias python2=/usr/bin/python2.7
+export WORKON_HOME=~/.virtualenvs
+export PATH=$PATH:~/Library/Python/3.7/bin:/usr/local/opt/python/libexec/bin
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
+
+export PATH="$HOME/.symfony/bin:$PATH"
