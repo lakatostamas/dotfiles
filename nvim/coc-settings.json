@@ -1,0 +1,13 @@
+  {
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql"
+  ],
+  "coc.preferences.jumpCommand": "tabe"
+}
+
